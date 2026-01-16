@@ -10,4 +10,60 @@ package com.mycompany.mavenproject2.bibliotecaArrays;
  */
 public class ArrayEstadisticas {
     
+    
+    
+     public static int suma(int[] array){
+    
+        int sumTotal = 0;
+        for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
+        
+            sumTotal += array[i];
+        
+        }
+              
+        return sumTotal;
+                
+    }    
+     
+    public static int media(int[] array){
+    
+        int sumTotal = 0;
+        for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
+        
+            sumTotal += array[i];
+        
+        }
+              
+        return sumTotal / ArrayUtil.contarElementos(array);
+                
+    }    
+    
+    public static int maximo(int[] array){
+    
+        int maximo = 0;
+        for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
+        
+            if (array[i] > maximo) maximo = array[i];
+        
+        }
+              
+        return maximo;
+                
+    }    
+    
+    public static int minimo(int[] array){
+    
+        int minTotal = 99999;
+        for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
+        
+            if (array[i] < minTotal) minTotal = array[i];
+        
+        }
+              
+        return minTotal;
+                
+    }    
+    
+    
+     
 }
