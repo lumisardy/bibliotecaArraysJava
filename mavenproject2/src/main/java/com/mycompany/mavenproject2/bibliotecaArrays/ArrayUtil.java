@@ -15,6 +15,10 @@ public class ArrayUtil {
     
     public static int contarElementos(int[] array){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
+        
         int contador = 0;
         for(int a : array){
         
@@ -27,6 +31,10 @@ public class ArrayUtil {
     // Este le he creado para poder hacer los ejercios de bidimensional sin el lenth por si decias que soy un inutil por usar el lenth, skereeeeeeeeeeeeeeeeeee <3
     public static int contarElementosArrys(int[][] array){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
+        
         int contador = 0;
         for(int [] a : array) contador++;
         return contador;
@@ -36,6 +44,9 @@ public class ArrayUtil {
     
     public static boolean estaVacio(int[] array){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
         if (ArrayUtil.contarElementos(array) == 0) return true; else return false;
     }
     
@@ -43,11 +54,17 @@ public class ArrayUtil {
     
     public static int obtenerPrimerElemento(int[] array){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
         return array[0];
     }
     // con el metodo que e creado - 1 comopruebo la ultima posicion
     public static int obtenerUltimoElemento(int[] array){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
         return array[ArrayUtil.contarElementos(array) - 1];
         
     }

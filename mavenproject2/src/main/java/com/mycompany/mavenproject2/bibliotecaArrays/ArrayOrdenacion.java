@@ -13,6 +13,10 @@ public class ArrayOrdenacion {
     
     public static boolean estaOrdenadoAsc(int[] array){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
+        
         boolean ordenado = true;
         int numAnt = array[0];
         
@@ -34,7 +38,9 @@ public class ArrayOrdenacion {
     
     public static int[] ordenarAsc(int[] array){
     
-        
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
         int expedition33 = 0;
         for(int e = 0; e < ArrayUtil.contarElementos(array);e++){
             for(int i = 1; i < ArrayUtil.contarElementos(array);i++){
@@ -54,7 +60,9 @@ public class ArrayOrdenacion {
     
     public static int[] ordenarDesc(int[] array){
     
-        
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
         int ligadeleyendas = 0;
         for(int e = 0; e < ArrayUtil.contarElementos(array)-1;e++){
             for(int i = 1; i < ArrayUtil.contarElementos(array)-1;i++){

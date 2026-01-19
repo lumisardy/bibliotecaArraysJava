@@ -13,6 +13,9 @@ public class ArrayBusqueda {
     //bueno en este contiene siempre va a ser falsa a no ser de que en una de las iteraciones el valor coincida con el que hemos pasado
     public static boolean contiene(int[] array, int valor){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
         boolean contiene = false;
         for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
         
@@ -28,7 +31,9 @@ public class ArrayBusqueda {
     
     public static int indiceDe(int[] array, int valor){
     
-        
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
       
         for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
         
@@ -49,6 +54,9 @@ public class ArrayBusqueda {
     
     public static int ultimoIndiceDe(int[] array, int valor){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
         int ultimoIndex = -1;
         for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
         

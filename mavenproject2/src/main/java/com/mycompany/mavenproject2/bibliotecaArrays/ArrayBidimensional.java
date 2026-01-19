@@ -14,6 +14,9 @@ public class ArrayBidimensional {
     // bucle anidado para recorrer y sumo +1 al contador
     public static int contarElementos(int[][] array){
     
+        if (array == null) {
+        throw new IllegalArgumentException("El array no puede ser null");
+        }
         int contador = 0;
 
         for(int i = 0; i < ArrayUtil.contarElementosArrys(array);i++){
@@ -33,6 +36,9 @@ public class ArrayBidimensional {
     
     public static int sumTotal(int[][] array){
     
+        if (array == null) {
+        throw new IllegalArgumentException("El array no puede ser null");
+        }
         int sumaTotal = 0;
         for(int i = 0; i < ArrayUtil.contarElementosArrys(array);i++){
         
@@ -51,6 +57,9 @@ public class ArrayBidimensional {
      
     public static int sumaFila(int[][] array, int fila){
     
+        if (array == null) {
+        throw new IllegalArgumentException("El array no puede ser null");
+        }
         int contador = 0;
         for(int i = 0; i < array[fila].length ;i++){
                 
@@ -68,6 +77,9 @@ public class ArrayBidimensional {
     
     public static int sumaColumna(int[][] array, int columna){
     
+        if (array == null) {
+        throw new IllegalArgumentException("El array no puede ser null");
+        }
         int contador = 0;
         for(int i = 0; i < array.length ;i++){
         

@@ -14,6 +14,10 @@ public class ArrayEstadisticas {
     // recorro el array y sumo el valor de cada uno a la variable sumTotal
      public static int suma(int[] array){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
+         
         int sumTotal = 0;
         for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
         
@@ -28,6 +32,10 @@ public class ArrayEstadisticas {
     // recorro el array y sumo el valor de cada uno a una variable y despues lo divido por el numero de valores sumados        
      
     public static int media(int[] array){
+         
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
     
         int sumTotal = 0;
         for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
@@ -44,6 +52,10 @@ public class ArrayEstadisticas {
     
     public static int maximo(int[] array){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
+        
         int maximo = 0;
         for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
         
@@ -59,6 +71,9 @@ public class ArrayEstadisticas {
     
     public static int minimo(int[] array){
     
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
+        }
         int minTotal = 999999999;
         for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
         

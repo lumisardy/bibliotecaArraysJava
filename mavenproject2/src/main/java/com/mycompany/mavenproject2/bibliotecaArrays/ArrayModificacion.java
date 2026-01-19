@@ -14,14 +14,17 @@ public class ArrayModificacion {
     //creo un array con la misma longitud que el recibido, y le copio los valores despues con un bucle
     
     public static int[] copiar(int[] array){
-    
-        int [] copia = new int[ArrayUtil.contarElementos(array)];
-        for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
         
-           copia[i] = array[i];
-        
+        if (array == null) {
+            throw new IllegalArgumentException("El array no puede ser null");
         }
-              
+
+        int[] copia = new int[ArrayUtil.contarElementos(array)];
+
+        for (int i = 0; i < ArrayUtil.contarElementos(array); i++) {
+            copia[i] = array[i];
+        }
+
         return copia;
                 
     }  
@@ -30,13 +33,17 @@ public class ArrayModificacion {
     
     public static int[] invertir(int[] array){
     
-        int [] copia = new int[ArrayUtil.contarElementos(array)];
-        for(int i = ArrayUtil.contarElementos(array) - 1; i != 0;i++){
-        
-           copia[i] = array[i];
-        
+        if (array == null) {
+        throw new IllegalArgumentException("El array no puede ser null");
         }
-              
+
+        int[] copia = new int[ArrayUtil.contarElementos(array)];
+        int longitud = ArrayUtil.contarElementos(array);
+
+        for (int i = 0; i < longitud; i++) {
+            copia[i] = array[longitud - 1 - i];
+        }
+
         return copia;
                 
     }
@@ -44,14 +51,24 @@ public class ArrayModificacion {
      //creo un array con la suma de los arrays, y cuando acaba uno pues le sigue el otro
     
     public static int[] concatenar(int[] array, int[] array2){
-    
-        int [] copia = new int[ArrayUtil.contarElementos(array) + ArrayUtil.contarElementos(array2)];
-        for(int i = 0; i < ArrayUtil.contarElementos(array) + ArrayUtil.contarElementos(array2) ;i++){
         
-           if (i < ArrayUtil.contarElementos(array)) copia[i] = array[i]; else copia[i] = array2[i];
-      
+        if (array == null || array2 == null) {
+            throw new IllegalArgumentException("Ningún array puede ser null");
         }
-              
+
+        int len1 = ArrayUtil.contarElementos(array);
+        int len2 = ArrayUtil.contarElementos(array2);
+
+        int[] copia = new int[len1 + len2];
+
+        for (int i = 0; i < len1; i++) {
+            copia[i] = array[i];
+        }
+
+        for (int i = 0; i < len2; i++) {
+            copia[len1 + i] = array2[i];
+        }
+
         return copia;
                 
     }
