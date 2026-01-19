@@ -11,13 +11,14 @@ package com.mycompany.mavenproject2.bibliotecaArrays;
 public class ArrayBidimensional {
  
     
-    
+    // bucle anidado para recorrer y sumo +1 al contador
     public static int contarElementos(int[][] array){
     
         int contador = 0;
-        for(int i = 0; i < array.length;i++){
+
+        for(int i = 0; i < ArrayUtil.contarElementosArrys(array);i++){
         
-           for(int e = 0; e < array[i].length;e++){
+           for(int e = 0; e < ArrayUtil.contarElementos(array[i]);e++){
            
                contador++;
            }
@@ -28,12 +29,14 @@ public class ArrayBidimensional {
                 
     }
     
-     public static int sumTotal(int[][] array){
+    // bucle anidado para recorrer y sumo cada valor al contador
+    
+    public static int sumTotal(int[][] array){
     
         int sumaTotal = 0;
-        for(int i = 0; i < array.length;i++){
+        for(int i = 0; i < ArrayUtil.contarElementosArrys(array);i++){
         
-           for(int e = 0; e < array[i].length;e++){
+           for(int e = 0; e < ArrayUtil.contarElementos(array[i]);e++){
            
                sumaTotal += array[i][e];
            }
@@ -43,6 +46,8 @@ public class ArrayBidimensional {
         return sumaTotal;
                 
     }
+    
+    // bucle para recorrer la fila solicitada y sumo cada valor
      
     public static int sumaFila(int[][] array, int fila){
     
@@ -58,6 +63,8 @@ public class ArrayBidimensional {
         return contador;
                 
     } 
+    
+    // bucle anidado para recorrer y sumo cada valor si concide con el valor de columna introducido
     
     public static int sumaColumna(int[][] array, int columna){
     

@@ -10,7 +10,7 @@ package com.mycompany.mavenproject2.bibliotecaArrays;
  */
 public class ArrayBusqueda {
  
-    
+    //bueno en este contiene siempre va a ser falsa a no ser de que en una de las iteraciones el valor coincida con el que hemos pasado
     public static boolean contiene(int[] array, int valor){
     
         boolean contiene = false;
@@ -23,6 +23,8 @@ public class ArrayBusqueda {
         return contiene;
                 
     }    
+    
+    // misma dinamica pero sacando el valor de i en esta iteracion y si no ps -1
     
     public static int indiceDe(int[] array, int valor){
     
@@ -40,6 +42,10 @@ public class ArrayBusqueda {
         
         return -1;       
     }  
+    
+    
+    
+    // misma que el anterior pero sustituyendo en caso de que haya uno despues de el primero
     
     public static int ultimoIndiceDe(int[] array, int valor){
     

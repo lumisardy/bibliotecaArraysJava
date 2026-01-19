@@ -10,6 +10,9 @@ package com.mycompany.mavenproject2.bibliotecaArrays;
  */
 public class ArrayModificacion {
     
+    
+    //creo un array con la misma longitud que el recibido, y le copio los valores despues con un bucle
+    
     public static int[] copiar(int[] array){
     
         int [] copia = new int[ArrayUtil.contarElementos(array)];
@@ -23,6 +26,8 @@ public class ArrayModificacion {
                 
     }  
     
+    //creo un array con la misma longitud que el recibido, y le copio los valores despues con un bucle pero a la inversa, i empieza por el final de el array
+    
     public static int[] invertir(int[] array){
     
         int [] copia = new int[ArrayUtil.contarElementos(array)];
@@ -35,6 +40,8 @@ public class ArrayModificacion {
         return copia;
                 
     }
+    
+     //creo un array con la suma de los arrays, y cuando acaba uno pues le sigue el otro
     
     public static int[] concatenar(int[] array, int[] array2){
     

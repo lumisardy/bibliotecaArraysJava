@@ -18,11 +18,8 @@ public class ArrayOrdenacion {
         
         for(int i = 1; i < ArrayUtil.contarElementos(array);i++){
         
-            if(numAnt > array[i])
-                ordenado = false;
-            else{
-                numAnt = array[i];
-            }
+            if(numAnt > array[i]) ordenado = false; else numAnt = array[i];
+            
                 
            
       
@@ -32,23 +29,23 @@ public class ArrayOrdenacion {
                 
     } 
     
+    
+    // Esta forma de ordenacion se llama buble short y en lo que consiste es coger los dos primero elementos compararlos y moverlos en caso de que la condicion se cumpla
+    
     public static int[] ordenarAsc(int[] array){
     
         
-        int temp = 0;
-        
-        for(int i = 1; i < ArrayUtil.contarElementos(array);i++){
-        
-          if(array[i - 1] > array[i]){
-              
-              temp = array[i -1];
-              array[i-1] = array[i];
-              array[i] = temp;
-          }
-            
-                
-           
-      
+        int expedition33 = 0;
+        for(int e = 0; e < ArrayUtil.contarElementos(array);e++){
+            for(int i = 1; i < ArrayUtil.contarElementos(array);i++){
+
+                if(array[i - 1] > array[i]){
+
+                    expedition33 = array[i -1];
+                    array[i-1] = array[i];
+                    array[i] = expedition33;
+                }
+            }
         }
               
        return array;
@@ -58,15 +55,15 @@ public class ArrayOrdenacion {
     public static int[] ordenarDesc(int[] array){
     
         
-        int temp = 0;
+        int ligadeleyendas = 0;
         for(int e = 0; e < ArrayUtil.contarElementos(array)-1;e++){
             for(int i = 1; i < ArrayUtil.contarElementos(array)-1;i++){
 
               if(array[i - 1] < array[i]){
 
-                  temp = array[i -1];
+                  ligadeleyendas = array[i -1];
                   array[i-1] = array[i];
-                  array[i] = temp;
+                  array[i] = ligadeleyendas;
               }
 
 
@@ -79,5 +76,6 @@ public class ArrayOrdenacion {
                 
     }
     
+
     
 }

@@ -11,7 +11,7 @@ package com.mycompany.mavenproject2.bibliotecaArrays;
 public class ArrayEstadisticas {
     
     
-    
+    // recorro el array y sumo el valor de cada uno a la variable sumTotal
      public static int suma(int[] array){
     
         int sumTotal = 0;
@@ -24,6 +24,8 @@ public class ArrayEstadisticas {
         return sumTotal;
                 
     }    
+            
+    // recorro el array y sumo el valor de cada uno a una variable y despues lo divido por el numero de valores sumados        
      
     public static int media(int[] array){
     
@@ -38,6 +40,8 @@ public class ArrayEstadisticas {
                 
     }    
     
+    // recorro el array y me quedo con el mayor 
+    
     public static int maximo(int[] array){
     
         int maximo = 0;
@@ -51,9 +55,11 @@ public class ArrayEstadisticas {
                 
     }    
     
+    // recorro el array y me quedo con el menor, a no ser de que el numero se pase de 999999999 xd
+    
     public static int minimo(int[] array){
     
-        int minTotal = 99999;
+        int minTotal = 999999999;
         for(int i = 0; i < ArrayUtil.contarElementos(array);i++){
         
             if (array[i] < minTotal) minTotal = array[i];
