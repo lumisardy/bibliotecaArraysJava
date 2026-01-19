@@ -38,8 +38,8 @@ public class ArrayModificacion {
     
     public static int[] concatenar(int[] array, int[] array2){
     
-        int [] copia = new int[ArrayUtil.contarElementos(array) * 2];
-        for(int i = 0; i < ArrayUtil.contarElementos(array) * 2 ;i++){
+        int [] copia = new int[ArrayUtil.contarElementos(array) + ArrayUtil.contarElementos(array2)];
+        for(int i = 0; i < ArrayUtil.contarElementos(array) + ArrayUtil.contarElementos(array2) ;i++){
         
            if (i < ArrayUtil.contarElementos(array)) copia[i] = array[i]; else copia[i] = array2[i];
       
