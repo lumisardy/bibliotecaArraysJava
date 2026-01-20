@@ -34,7 +34,7 @@ public class ArrayBidimensional {
     
     // bucle anidado para recorrer y sumo cada valor al contador
     
-    public static int sumTotal(int[][] array){
+    public static int sumaTotal(int[][] array){
     
         if (array == null) {
         throw new IllegalArgumentException("El array no puede ser null");
