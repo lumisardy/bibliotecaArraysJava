@@ -7,7 +7,6 @@ package com.mycompany.herencia;
 import fecha.Disco;
 import fecha.Publicacion;
 import java.util.Calendar;
-import fecha.publicaciones;
 
 /**
  *
@@ -26,15 +25,60 @@ public class Herencia {
         
         
         
-        Disco a = new Disco("Paraiso","esteban",fhoy.get(Calendar.YEAR),fhoy.get(Calendar.MONTH),fhoy.get(Calendar.DAY_OF_MONTH),249);
+        Publicacion a = new Disco("Paraiso","esteban",fhoy.get(Calendar.YEAR),fhoy.get(Calendar.MONTH),fhoy.get(Calendar.DAY_OF_MONTH),249);
+        
+        a.anadirpubli(a);
+        e.anadirpubli(e);
+        
+        int mayorDuracion = 0;
+        String letrasAut = "";
+        String letrasTitu = "";
+        for(Publicacion c : Publicacion.publicaciones){
+        
+            if(c instanceof Disco){
+                
+                if(mayorDuracion < ((Disco) c).getDuracionMinutos())
+                
+                    mayorDuracion = ((Disco) c).getDuracionMinutos();
+                    
+            }
+        }
+        
+        for(Publicacion c : Publicacion.publicaciones){
+        
+            if(((Disco) c).getDuracionMinutos() == mayorDuracion){
+            
+                
+                
+                
+                for(int i = 0;i < 3;i++){
+                    
+                        letrasAut += c.getAutor().charAt(i);
+                    
+                    }
+                for(int i = 0;i < 3;i++){
+                    
+                        letrasTitu += c.getTitulo().charAt(i);
+                    
+                    }
+               
+                
+            } 
+        
+        }
+        
+        
+        
+
+        
+        
+       
         
         
         
         a.toString();
         
-        for(Publicaciones e : Publicacion.publicaciones){
         
-        }
         
         
     }
