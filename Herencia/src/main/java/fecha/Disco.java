@@ -8,6 +8,21 @@ package fecha;
  *
  * @author dam114
  */
-public class Disco {
+public class Disco extends Publicacion {
+    
+    int duracionMinutos;
+    
+    public Disco(String titulo, String autor,int ano,int mes, int dia,int duracionMinutos){
+        
+        super(titulo,autor,ano,mes,dia);
+        this.duracionMinutos = duracionMinutos;
+        
+        
+    
+    }
+
+    public int getDuracionMinutos() {
+        return duracionMinutos;
+    }
     
 }

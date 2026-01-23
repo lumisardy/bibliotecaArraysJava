@@ -4,7 +4,9 @@
 
 package com.mycompany.herencia;
 
+import eje3.Cilindro;
 import fecha.Disco;
+import fecha.Libro;
 import fecha.Publicacion;
 import java.util.Calendar;
 
@@ -16,15 +18,10 @@ public class Herencia {
 
     public static void main(String[] args) {
        
+        /* Ejercicio 3
         Calendar fhoy = Calendar.getInstance();
-        
-        
-        
-        
+
         Publicacion e = new Publicacion("Paraiso","esteban",fhoy.get(Calendar.YEAR),fhoy.get(Calendar.MONTH),fhoy.get(Calendar.DAY_OF_MONTH));
-        
-        
-        
         Publicacion a = new Disco("Paraiso","esteban",fhoy.get(Calendar.YEAR),fhoy.get(Calendar.MONTH),fhoy.get(Calendar.DAY_OF_MONTH),249);
         
         a.anadirpubli(a);
@@ -34,51 +31,39 @@ public class Herencia {
         String letrasAut = "";
         String letrasTitu = "";
         for(Publicacion c : Publicacion.publicaciones){
-        
-            if(c instanceof Disco){
-                
+            if(c instanceof Disco){ 
                 if(mayorDuracion < ((Disco) c).getDuracionMinutos())
-                
-                    mayorDuracion = ((Disco) c).getDuracionMinutos();
-                    
+                    mayorDuracion = ((Disco) c).getDuracionMinutos();  
             }
         }
         
         for(Publicacion c : Publicacion.publicaciones){
         
             if(((Disco) c).getDuracionMinutos() == mayorDuracion){
-            
-                
-                
-                
                 for(int i = 0;i < 3;i++){
-                    
                         letrasAut += c.getAutor().charAt(i);
-                    
                     }
                 for(int i = 0;i < 3;i++){
-                    
-                        letrasTitu += c.getTitulo().charAt(i);
-                    
-                    }
-               
-                
+                        letrasTitu += c.getTitulo().charAt(i);            
+                    }  
             } 
-        
         }
         
+        for(Publicacion c : Publicacion.publicaciones){
         
-        
-
-        
-        
-       
-        
-        
-        
+            if(c instanceof Libro && ((Libro) c).getNumPaginas() > 1000 && c.getFecha().MONTH == Calendar.MONTH){
+                c.getAutor();
+                c.getTitulo();
+            } 
+        }
         a.toString();
         
+        */
         
+        
+        Cilindro c1 = new Cilindro(7,5);
+        
+        System.out.println(c1.volumen());
         
         
     }

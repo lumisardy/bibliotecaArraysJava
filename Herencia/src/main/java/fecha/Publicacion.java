@@ -24,6 +24,12 @@ public class Publicacion {
         this.titulo = titulo;
         this.autor = autor;
         
+        Calendar cal = Calendar.getInstance();
+        cal.setLenient(false);
+        cal.set(ano,mes,dia);
+        
+        fecha = cal;
+        
         
     
     }
